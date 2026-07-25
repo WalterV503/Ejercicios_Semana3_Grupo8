@@ -1,4 +1,4 @@
-package modelo;
+package com.sv.grupo8.ejercicio7;
 import java.util.ArrayList;
 
 public class Orden {

@@ -1,5 +1,5 @@
-package controlador;
-import modelo.*;
+package com.sv.grupo8.ejercicio7;
+
 public class ControladorRestaurant {
 	public void inicio() {
 		Cliente cliente = new Cliente(100,"Familia Zepeda");
