@@ -1,4 +1,5 @@
-package com.sv.grupo8.ejercicio7;
+package com.sv.grupo8.ejercicio9;
+import java.util.Scanner;
 
 public class ControladorRestaurant {
 	public void inicio() {
@@ -19,7 +20,16 @@ public class ControladorRestaurant {
 		orden.agregarDetalle(new DetallePedido(pl5,2)); 
 		
 		orden.imprimirOrden();
+
+		Scanner teclado = new Scanner(System.in);
+
+		System.out.print("\nIngrese el tipo de pago (E = Efectivo, T = Tarjeta): ");
+		char tipoPago = teclado.next().charAt(0);
 		
+		double totalFinal = orden.tipoDePago(tipoPago);
+		System.out.printf("Total a pagar: $%.2f%n", totalFinal);
+
+		teclado.close();
 	}
 
 }

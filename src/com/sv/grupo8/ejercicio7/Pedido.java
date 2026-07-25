@@ -1,16 +1,16 @@
 package com.sv.grupo8.ejercicio7;
 import java.util.ArrayList;
 
-public class Orden {
+public class Pedido {
 	private int ordenNo;
 	private int mesaNo;
 	private Cliente cliente;
-	private ArrayList<DetalleOrden> detalles;
+	private ArrayList<DetallePedido> detalles;
 	
-	public Orden() {
+	public Pedido() {
 		detalles = new ArrayList<>();
 	}
-	public Orden(int ordenNo, int mesaNo, Cliente cliente) {
+	public Pedido(int ordenNo, int mesaNo, Cliente cliente) {
 		this.ordenNo = ordenNo;
 		this.mesaNo = mesaNo;
 		this.cliente = cliente;
@@ -38,22 +38,22 @@ public class Orden {
 		this.cliente = cliente;
 	}
 	
-	public ArrayList<DetalleOrden> getDetalles(){
+	public ArrayList<DetallePedido> getDetalles(){
 		return detalles;
 	}
-	public void agregarDetalle(DetalleOrden detalle) {
+	public void agregarDetalle(DetallePedido detalle) {
 		detalles.add(detalle);
 	}
 		
 	public double calculaTotalaPagar() {
 		double total = 0;
 		
-		for (DetalleOrden detalle: detalles) {
+		for (DetallePedido detalle: detalles) {
 			total += detalle.Subtotal();
 		}
 		return total;
 		}
-	public void imprimirorden() {
+	public void imprimirOrden() {
 		System.out.println("\nRestaurante Arci");
 		System.out.println("ORDEN DE CONSUMO");
 		System.out.println("No." + ordenNo);
@@ -64,11 +64,15 @@ public class Orden {
 		System.out.println("\nDETALLE:");
 		System.out.println("Plato Ordenado                            Cantidad       Subtotal");
 		
-		for (DetalleOrden detalle : detalles) {
+		for (DetallePedido detalle : detalles) {
 			detalle.imprimirOrden();
 		}
 		System.out.println("------------------------------------------------------------------");
 		System.out.println("Total Consumo (Sin propina)                              $" + calculaTotalaPagar());
+		
+	}
+
+	public void tipoDePago(){
 		
 	}
 }

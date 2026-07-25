@@ -1,13 +1,13 @@
-package com.sv.grupo8.ejercicio7;
+package com.sv.grupo8.ejercicio9;
 
-public class DetalleOrden {
+public class DetallePedido {
 	private Platillo platillo;
 	private int cantidad;
 	
-	public DetalleOrden() {
+	public DetallePedido() {
 	}
 
-	public DetalleOrden(Platillo platillo, int cantidad) {
+	public DetallePedido(Platillo platillo, int cantidad) {
 		this.platillo = platillo;
 		this.cantidad = cantidad;
 	}
