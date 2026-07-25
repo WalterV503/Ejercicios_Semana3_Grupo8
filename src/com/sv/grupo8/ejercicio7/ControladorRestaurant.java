@@ -1,0 +1,25 @@
+package com.sv.grupo8.ejercicio7;
+
+public class ControladorRestaurant {
+	public void inicio() {
+		Cliente cliente = new Cliente(100,"Familia Zepeda");
+		
+		Platillo pl1 = new Platillo(500,"Tacos de Lengua",7.25);
+		Platillo pl2 = new Platillo(501,"Torta Mexicana",6.50);
+		Platillo pl3 = new Platillo(605,"Wantan (12 unidades)",8.75);
+		Platillo pl4 = new Platillo(610,"Sopa de Tortillas",5.00);
+		Platillo pl5 = new Platillo(700,"Frozen de Coco", 4.50);
+	
+		Pedido orden = new Pedido (75, 5, cliente);
+		
+		orden.agregarDetalle(new DetallePedido(pl1,2));
+		orden.agregarDetalle(new DetallePedido(pl2,2));
+		orden.agregarDetalle(new DetallePedido(pl3,1));
+		orden.agregarDetalle(new DetallePedido(pl4,2));
+		orden.agregarDetalle(new DetallePedido(pl5,2)); 
+		
+		orden.imprimirOrden();
+		
+	}
+
+}
