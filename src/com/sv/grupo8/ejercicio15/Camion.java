@@ -1,6 +1,6 @@
 package com.sv.grupo8.ejercicio15;
 
-public class Camion extends vehiculo {
+public class Camion extends Vehiculo {
     private int numeroEjes;
 
     public Camion(String placa, String marca, int numeroEjes) {
