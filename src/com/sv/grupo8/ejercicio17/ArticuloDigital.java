@@ -8,10 +8,4 @@ public class ArticuloDigital extends Articulo {
         super(id, descripcion, precioBase);
         this.urlDescarga = urlDescarga;
     }
-
-    @Override
-    public void mostrarFicha() {
-        super.mostrarFicha();
-        System.out.println("URL de descarga: " + urlDescarga);
-    }
 }
