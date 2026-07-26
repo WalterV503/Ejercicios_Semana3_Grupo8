@@ -12,8 +12,11 @@ public class Controlador {
         empleados.add(new Medico("Dra. Lopez"));
         empleados.add(new Enfermera("Sofia"));
 
+        System.out.println("=== CONTROL DE TURNOS DEL HOSPITAL ===");
         for (EmpleadoHospital empleado : empleados) {
+            System.out.println("Empleado: " + empleado.nombre);
             empleado.ejecutarTurno();
+            System.out.println("--------------------------------------");
         }
     }
 }

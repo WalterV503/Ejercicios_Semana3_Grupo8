@@ -14,6 +14,7 @@ public class Articulo {
 
     public void mostrarFicha() {
         System.out.println("ID: " + id);
+        System.out.println("Descripcion: " + descripcion);
         System.out.println("Precio: $" + precioBase);
     }
 }
